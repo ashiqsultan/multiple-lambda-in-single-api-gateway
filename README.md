@@ -12,6 +12,6 @@ provider:
 
 ## Instructions
 * Create new API Gateway in AWS console.
-* Note down API ID and Resourse ID
-* The ID next to the API name is the API ID(jte3ap5vzd). 
-* The ID right of the ‘Resource’ is the root resourceID(63l279u23l).
+* You can find the API ID and Resourse ID on top of the API Gateway screen
+* The ID next to the API name is the API ID(q46soknj3c). 
+* The ID right of the ‘Resource’ is the root resourceID(uuni865ulk).

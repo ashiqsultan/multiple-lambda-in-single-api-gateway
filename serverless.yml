@@ -1,0 +1,23 @@
+service: microservice-name #Name of your App
+
+provider:
+  name: aws
+  runtime: nodejs12.x # Node JS version
+  memorySize: 256
+  timeout: 15
+  stage: production
+  region: ap-south-1 # AWS region
+  apiGateway: # Optional API Gateway global config
+    restApiId: q46soknj3c # This should be same for the other api being deployed to the same API Gateway
+    restApiRootResourceId: uuni865ulk # This should be same for the other api being deployed to the same API Gateway
+
+functions:
+  demoapi:
+    handler: lambda.handler
+    events:
+      - http:
+          path: /resourse-name/v1 # this matches the base path. Example path to v1
+          method: ANY
+      - http:
+          path: /resourse-name/v1/{any+} # this matches any path after v1
+          method: ANY
